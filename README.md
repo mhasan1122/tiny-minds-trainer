@@ -2,6 +2,25 @@
 
 An educational kids game built with Expo and React Native. Help children learn colors, counting, shapes, memory, and animal sounds through fun, interactive mini games.
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/welcome.png" width="200" alt="Welcome screen" />
+  <img src="assets/screenshots/game-selection.png" width="200" alt="Game selection" />
+</p>
+<p align="center">
+  <em>Welcome screen · Choose a Game</em>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/animal-sounds.png" width="200" alt="Animal Sounds game" />
+  <img src="assets/screenshots/memory-cards.png" width="200" alt="Memory Cards game" />
+  <img src="assets/screenshots/shape-match.png" width="200" alt="Shape Match game" />
+</p>
+<p align="center">
+  <em>Animal Sounds · Memory Cards · Shape Match</em>
+</p>
+
 ## Features
 
 - **5 Mini Games**
