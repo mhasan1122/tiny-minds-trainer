@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# Brain Kids Game
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An educational kids game built with Expo and React Native. Help children learn colors, counting, shapes, memory, and animal sounds through fun, interactive mini games.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **5 Mini Games**
+  - **Color Match** — Match colors correctly
+  - **Counting Fun** — Count to 10
+  - **Shape Match** — Find and identify shapes
+  - **Memory Cards** — Find matching pairs
+  - **Animal Sounds** — Guess animals by their sounds
 
-   ```bash
-   npm install
-   ```
+- **Difficulty Levels** — Easy, Medium, and Hard modes
+- **Star Rewards** — Earn stars for completed games
+- **Sound Effects** — Toggle on/off for game sounds
+- **Responsive Design** — Works on mobile, tablet, and desktop (web)
+- **Dark & Light Themes** — Automatic theme based on system preference
 
-2. Start the app
+## Prerequisites
 
-   ```bash
-   npx expo start
-   ```
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [npm](https://www.npmjs.com/) or [Bun](https://bun.sh/)
+- [Expo Go](https://expo.dev/go) app on your phone (for testing on device)
+- iOS Simulator (macOS) or Android Emulator (optional)
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Installation
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Running the App
 
-## Learn more
+```bash
+# Start the development server
+npm start
 
-To learn more about developing your project with Expo, look at the following resources:
+# Run on iOS (requires Xcode)
+npm run ios
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+# Run on Android (requires Android Studio)
+npm run android
 
-## Join the community
+# Run in web browser
+npm run web
+```
 
-Join our community of developers creating universal apps.
+After running `npm start`, scan the QR code with Expo Go (Android) or the Camera app (iOS) to open the app on your device.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start Expo development server |
+| `npm run ios` | Run on iOS simulator |
+| `npm run android` | Run on Android emulator |
+| `npm run web` | Run in web browser |
+| `npm run build` | Export for production |
+| `npm run build:web` | Export web build |
+| `npm run lint` | Run ESLint |
+| `npm run reset-project` | Reset project to blank state |
+
+## Project Structure
+
+```
+├── app/                    # Expo Router screens
+│   ├── _layout.tsx         # Root layout with theme
+│   ├── index.tsx           # Welcome screen
+│   ├── games.tsx           # Game selection
+│   ├── reward.tsx          # Rewards screen
+│   └── game/               # Individual game screens
+│       ├── colors.tsx
+│       ├── counting.tsx
+│       ├── shapes.tsx
+│       ├── memory.tsx
+│       └── animals.tsx
+├── components/             # Reusable UI components
+├── constants/              # Game data, colors, config
+├── contexts/               # React context (GameContext, etc.)
+├── hooks/                  # Custom hooks (sound, animations)
+└── scripts/                # Build & utility scripts
+```
+
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `EXPO_PUBLIC_API_BASE_URL` | Optional. API base URL (default: `https://www.capsulethis.com`) |
+
+## Tech Stack
+
+- **Expo** 54 — React Native framework
+- **Expo Router** — File-based navigation
+- **TypeScript** — Type safety
+- **React Native Reanimated** — Animations
+- **Lucide React Native** — Icons
+- **Nunito** — Custom fonts via `@expo-google-fonts/dev`
+
+## Building for Production
+
+```bash
+# Create production build
+npm run build
+
+# Web-specific build
+npm run build:web
+```
+
+## License
+
+Private — All rights reserved.
